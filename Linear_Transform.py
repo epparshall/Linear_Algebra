@@ -38,7 +38,7 @@ class Linear_Transform():
         self.ipad_entry_y = 10
         self.plot_grid_size = 10
         self.lim_factor = 1.1
-        self.font_size = 14
+        self.font_size = 20
 
         self.total_min = np.min([np.min([0, np.min(self.points[:,0])]), np.min([0, np.min(self.points[:,1])])])
         self.total_max = np.max([np.max([0, np.max(self.points[:,0])]), np.max([0, np.max(self.points[:,1])])])
@@ -86,7 +86,7 @@ class Linear_Transform():
         Tk.mainloop()
 
     def create_gui_matrix_elements(self):
-        Tk.Label(self.root, width=16, fg='blue', font=('Arial', 2*self.font_size,'bold'), textvariable=Tk.StringVar(self.root, "Linear Transformation")).grid(column=0, row=0, padx=self.pad_entry_x, pady=self.pad_entry_y, ipadx=self.ipad_entry_x, ipady=self.ipad_entry_y)
+        Tk.Label(self.root, width=16, fg='blue', font=('Arial', self.font_size,'bold'), textvariable=Tk.StringVar(self.root, "Linear Transformation")).grid(column=0, row=0, padx=self.pad_entry_x, pady=self.pad_entry_y, ipadx=self.ipad_entry_x, ipady=self.ipad_entry_y)
         Tk.Label(self.root, width=16, fg='blue', font=('Arial',self.font_size,'bold'), textvariable=Tk.StringVar(self.root, "A = ")).grid(row=int(self.plot_grid_size/2)-1, column=self.plot_grid_size, padx=self.pad_entry_x, pady=self.pad_entry_y, ipadx=self.ipad_entry_x, ipady=self.ipad_entry_y)
         Tk.Label(self.root, width=16, fg='blue', font=('Arial',self.font_size,'bold'), textvariable=Tk.StringVar(self.root, "x = ")).grid(row=int(self.plot_grid_size/2)-4, column=self.plot_grid_size, padx=self.pad_entry_x, pady=self.pad_entry_y, ipadx=self.ipad_entry_x, ipady=self.ipad_entry_y) 
         Tk.Label(self.root, width=16, fg='blue', font=('Arial',self.font_size,'bold'), textvariable=Tk.StringVar(self.root, "b = ")).grid(row=int(self.plot_grid_size/2)+1, column=self.plot_grid_size, padx=self.pad_entry_x, pady=self.pad_entry_y, ipadx=self.ipad_entry_x, ipady=self.ipad_entry_y)          
@@ -130,5 +130,5 @@ if __name__ == "__main__":
     A = 2 * np.array([[np.cos(theta), -np.sin(theta)], [np.sin(theta), np.cos(theta)]])
     x = np.array([3, 2]).T
 
-    obj = Linear_Transform(matrix=A, vector=x, num_points=300)
+    obj = Linear_Transform(matrix=A, vector=x, num_points=175)
     obj.animate_matrix_power()
