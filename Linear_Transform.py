@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 from matplotlib import animation
 from scipy.linalg import fractional_matrix_power
 import tkinter as Tk
-from tkinter import ttk
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 class Linear_Transform():
