@@ -1,4 +1,7 @@
-# Linear_Algebra
-Animations for Linear Algebra
+# Linear Algebra
+This repository provides a 2D intuition for a linear transformation with a GUI.
 
-This project is a mess with permissions but it is working now I hope
+In the command prompt, type or copy the command `https://github.com/epparshall/Linear_Algebra`.
+Open the folder and type `python3 Linear_Transform.py`
+
+Enjoy!
